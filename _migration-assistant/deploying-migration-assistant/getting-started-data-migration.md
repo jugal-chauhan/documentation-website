@@ -145,15 +145,10 @@ Use the following steps to configure and deploy RFS, deploy Migration Assistant,
             }
         },
         "reindexFromSnapshotExtraArgs": "<RFS PARAMETERS (see below)>",
-        "reindexFromSnapshotServiceEnabled": true,
         "reindexFromSnapshotMaxShardSizeGiB": 80,
-        "trafficReplayerServiceEnabled": true,
-        "captureProxyServiceEnabled": true,
         "otelCollectorEnabled": true,
         "migrationConsoleServiceEnabled": true,
         "migrationAssistanceEnabled": true,
-        "targetClusterProxyServiceEnabled": true,
-        "trafficReplayerExtraArgs": "--speedup-factor 10.0",
         "artifactBucketRemovalPolicy": "DESTROY"
     }
     }
@@ -299,21 +294,21 @@ You can now use RFS to migrate documents from your original cluster:
     console backfill start
     ```
     {% include copy.html %}
-
+    
 2. _(Optional)_ To speed up the migration, increase the number of documents processed at a simultaneously by using the following command:
 
     ```bash
     console backfill scale <NUM_WORKERS>
     ```
     {% include copy.html %}
-
+    
 3. To check the status of the documentation backfill, use the following command:
 
     ```bash
     console backfill status
     ```
     {% include copy.html %}
-
+    
 4. If you need to stop the backfill process, use the following command:
 
     ```bash
@@ -365,4 +360,3 @@ fields @message
 {% include copy.html %}
 
 If any failed documents are identified, you can index the failed documents directly as opposed to using RFS.
-
