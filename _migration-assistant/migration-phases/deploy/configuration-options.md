@@ -13,6 +13,9 @@ redirect_from:
 
 # Configuration options
 
+This page describes the ECS/CDK-based configuration (Migration Assistant 2.x). For the Kubernetes/Workflow CLI configuration (Migration Assistant 3.x), see the [Workflow CLI Getting Started](https://github.com/opensearch-project/opensearch-migrations/wiki/Workflow-CLI-Getting-Started) documentation.
+{: .note }
+
 This page outlines the configuration options for three key migrations scenarios:
 
 1. **Metadata migration**
@@ -180,7 +183,7 @@ Both the source and target cluster can use no authentication, authentication lim
 ```
 {% include copy.html %}
 
-The `serviceSigningName` can be `es` for an Elasticsearch or OpenSearch domain.
+The `serviceSigningName` can be `es` for an Amazon OpenSearch Service domain or `aoss` for an Amazon OpenSearch Serverless collection.
 
 All of these authentication options apply to both source and target clusters.
 

@@ -107,3 +107,23 @@ scenarios:
         url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/reroute-traffic-from-capture-proxy-to-target/"
       - title: "Teardown"
         url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/remove-migration-infrastructure/"
+
+  - title: "Scenario 4: Backfill to Amazon OpenSearch Serverless"
+    steps:
+      - title: "Assessment"
+        url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/assessment/"
+      - title: "Deploy"
+        url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/"
+        substeps:
+          - title: "IAM and security groups for existing clusters"
+            url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/iam-and-security-groups-for-existing-clusters/"
+          - title: "Configuration options"
+            url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/configuration-options/"
+          - title: "Verify backfill components"
+            url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/deploy/verifying-backfill-components/"
+      - title: "Create a snapshot"
+        url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/create-snapshot/"
+      - title: "Backfill"
+        url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/backfill/"
+      - title: "Teardown"
+        url: "{{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/remove-migration-infrastructure/"

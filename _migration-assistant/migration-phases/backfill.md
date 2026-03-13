@@ -10,9 +10,15 @@ redirect_from:
 
 # Using backfill
 
+This page describes the ECS-based backfill process (Migration Assistant 2.x). For the Kubernetes/Workflow CLI approach (Migration Assistant 3.x), see the [Backfill Workflow](https://github.com/opensearch-project/opensearch-migrations/wiki/Backfill-Workflow) documentation.
+{: .note }
+
 After the [metadata]({{site.url}}{{site.baseurl}}/migration-assistant/migration-phases/migrate-metadata/) for your cluster has been migrated, you can use Capture Proxy data replication and snapshots to backfill your data into the next cluster.
 
 ## Migrate documents with RFS
+
+By default, RFS workers use a dedicated coordinator cluster for work coordination. This isolates coordination traffic from the target cluster and enables migration to targets like Amazon OpenSearch Serverless.
+{: .note }
 
 You can now use RFS to migrate documents from your original cluster:
 

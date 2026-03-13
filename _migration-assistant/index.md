@@ -32,6 +32,9 @@ Migration Assistant for OpenSearch helps you successfully perform an end-to-end,
 - **Backfill migration**: Migrate existing or historical data from a source to a target cluster.
 - **Live traffic migration**: Replicate live ongoing traffic from a source to a target cluster.
 
+Migration Assistant supports Amazon OpenSearch Service domains and Amazon OpenSearch Serverless collections as targets. For Serverless targets, only document backfill is supported; metadata must be configured separately.
+{: .note }
+
 This user guide focuses on conducting a comprehensive migration.
 
 {% include list.html list_items=page.items%}
